@@ -23,8 +23,17 @@ header{
 	text-align: center; /*Centers the text in header */
 	padding: 16px; /*spacing*/
 	background-color: #4A6D7C; /*Blue gray header */
+	position: relative;
+	border: 2px solid #3D5467;
 }
-
+header .logo{
+	position: absolute; /*sets the left edge of element to a unit to the left of the left edge of its nearest positioned ancestor
+	(https://www.w3schools.com/cssref/pr_pos_left.php)*/
+	left: -32px;
+	top: 16px;
+	height: 150px;
+	width: auto;
+}
 nav{
 	text-align:center; /*centers text*/
 	padding: 1em; /*spacing*/
