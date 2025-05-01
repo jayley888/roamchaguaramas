@@ -29,7 +29,7 @@ header{
 header .logo{
 	position: absolute; /*sets the left edge of element to a unit to the left of the left edge of its nearest positioned ancestor
 	(https://www.w3schools.com/cssref/pr_pos_left.php)*/
-	left: -32px;
+	left: 8px;
 	top: 16px;
 	height: 150px;
 	width: auto;
