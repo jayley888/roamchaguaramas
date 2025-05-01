@@ -238,7 +238,7 @@ form button:hover{
 	text-align: center; /*centers the text*/
 }
 .event img{
-	width:300px; /*fixed width and height of images*/
+	width: 300px; /*fixed width and height of images*/
 	height: 320px;
 }
 .event{
@@ -280,4 +280,9 @@ iframe{
 .maps{
 	text-align: center;
 	margin-bottom: 16px; /*spacing between headings and pictures*/
+}
+.sentence1{
+	grid-column: 1/4; /*spans all 3 columns*/
+	text-align: center;
+	margin-bottom: 24px; /*space between sentence and the places section*/
 }
