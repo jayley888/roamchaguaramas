@@ -1,0 +1,283 @@
+*{
+	box-sizing: border-box;  /*Source: W3schools: https://www.w3schools.com/css/css3_box-sizing.asp */
+}
+body{
+	margin: 0; /* Removes default spacing around body content (W3schools: https://www.w3schools.com/css/css_margin.asp) */
+	font-family: Open Sans, sans-serif; /*Sets clean readable font */
+	background-color: #C6C5B9;  /*Applies a beige background (Coolors: https://coolors.co/ ) */
+	color: #4A6D7C; /*Default font colour body text- a blue gray colour */
+	font-size: 18px; /*Makes all text to be size 18 text*/
+}
+/*Link- applies a light blue colour to the link text and when you hover over it,it turns white*/
+a{
+	color: #6CA6C1;  /*(Coolors: https://coolors.co/ ) */
+}
+a:hover{
+	color:white;
+	text-decoration: none;  /* Removes underline 
+	                    (W3schools: https://www.w3schools.com/css/css_text_decoration.asp) */
+}
+header{
+	font-family: Verdana,sans-serif; /* Big readable heading */
+	color: white; /*Colour text*/
+	text-align: center; /*Centers the text in header */
+	padding: 16px; /*spacing*/
+	background-color: #4A6D7C; /*Blue gray header */
+}
+
+nav{
+	text-align:center; /*centers text*/
+	padding: 1em; /*spacing*/
+	font-family: Verdana,sans-serif; /*text font*/
+	font-size: 18px; /*text size*/
+	background-color: #4A6D7C; /*background colour of menu*/
+}
+nav ul{ /*Source: W3schools: https://www.w3schools.com/css/css_navbar.asp */
+	display: flex; /* display and justify-content align the flex items at the center of the container 
+	              (W3schools: https://www.w3schools.com/cssref/css3_pr_justify-content.php*/
+	justify-content: center;
+	list-style-type: none; /*Removes the default disc format */
+	padding: 0; /*padding to 0 removes the browser default setting */
+}
+nav ul li a{
+	padding: 0.25em 1em; /*Adds padding around each link (miss document)*/
+	text-decoration:none; /*no underlining*/
+	display: inline-block; /*Used to display them horizontally 
+	                      (W3schools: https://www.w3schools.com/css/css_inline-block.asp*/
+	font-weight: bold; /*Styles the link text bold */
+	text-align: center; /*centers menu text*/
+}
+nav ul li a:hover,nav ul li a:focus{
+	background-color: white;
+	color: black;
+	font-weight:bold;
+}
+.hero-slider{
+	position: relative; /* The element is positioned relative to its normal position
+	                   (https://www.w3schools.com/css/css_positioning.asp) */
+	height: 400px;  /*Sets a fixed height for hero slider */
+	width: 100%;   /*Sets the hero slider width to take up the full width of its container */
+	overflow: hidden; /*Clips any of the picture if too big to fit into the area 
+	                  (https://www.w3schools.com/css/css_overflow.asp) */
+	margin: 0 auto; /* Center the slider horizontally and sets top and bottom margins to 0
+               	   (https://www.w3schools.com/css/css_margin.asp) */		   
+}
+.slide{
+	position: absolute; /*Sets inside the hero slider */
+	width: 100%; /*Full width */
+	height: 100%; /*Full height */
+	opacity: 0; /*Sets transparency level to 0 since default is 1 */
+	left: 0; /*Aligns all slides to the left */
+	margin: 0; /*margin and padding to 0 remove the browser default settings */
+	padding: 0;
+	animation: fade 12s infinite ease-in-out;  /*Runs fade animation 
+	                                      (https://www.w3schools.com/css/css3_animations.asp)*/
+}
+.slide:nth-child(1){
+	animation-delay: 0s; /*First slide starts immediately 
+	                    (https://www.w3schools.com/css/css_pseudo_classes.asp)*/
+}
+.slide:nth-child(2){
+	animation-delay: 4s; /*Second slide starts after 4 seconds */
+}
+.slide:nth-child(3){
+	animation-delay: 8s; /*Third slide starts after 8 seconds */
+}
+@keyframes fade{ /*Controls the steps in an animation (https://www.w3schools.com/cssref/atrule_keyframes.php) */
+   0%,33%{  
+	   opacity: 1;  /*Fully visible here */
+	   z-index: 1;  /*Sets the order this on top (https://www.w3schools.com/cssref/pr_pos_z-index.php) */
+   }
+   34%,100%{
+	   opacity: 0;  /*Fully transparent here */
+	   z-index: 0; /*Hidden behind*/
+   }
+}
+.hero-slider img{
+	width: 100%; /*Full width of image */
+	height: 100%; /*Full height of image */
+	object-fit: cover; /*Clipped to fit (https://www.w3schools.com/cssref/css3_pr_object-fit.php)*/
+	display: block;  /*Fits the slider cleanly so that there are no gaps or weird spacing*/
+}
+main{
+	padding: 32px; /*Adds space on all sides*/
+	display: flex; /*Align things in a row or wrap if needed (https://www.w3schools.com/css/css3_flexbox.asp)*/
+	flex-wrap: wrap; /*move to next row if no space*/
+	font-size: 18px; /*Text size is 18*/
+	color: #4A6D7C; /*Text colour*/
+	margin: 0 auto; /*Horizontally centers the container*/
+	justify-content: center; /*Aligns the items in container to be centered*/
+	line-height: 1.6; 
+}
+main section,aside{
+	color: #4A6D7C; /*Text colour for both */
+	font-size: 18px;  /*Font colour for both */
+	background-color: #C6C5B9; /*Beige background*/
+	padding: 24px; /*Spacing*/
+	flex: 1 1 45%; /*Takes 45% of the container width*/
+}
+main section h3, main section h2{
+	color: #4A6D7C; /*Text colour*/
+	font-family: Verdana, sans-serif; /*Text font*/
+}
+.main-content,.rules{
+	border: 2px solid #ddd; /*Border for both sections*/
+	padding: 12px;	/*Spacing*/
+	line-height: 1.6;
+}
+.main-content{
+	flex: 2; /*Takes up 2 parts of container*/
+}
+.rules{
+	flex: 1; /*Takes up 1 part of container*/
+}
+.rules ul li{
+	margin-bottom: 24px;	/*Add space between each list item*/
+	list-style-type: square; /*Changes it to squre instead of disc*/
+}
+.contact ul li{
+	margin: 32px; /*Add space between each list item*/
+	list-style-type: square; /*Changes it to squre instead of disc*/
+}
+footer{
+	background-color: #4A6D7C; /*Background colour of footer*/
+	color: white; /*Footer text colour*/
+	text-align: center; /*Text centered*/
+	padding: 16px; /*Spacing all sides */
+	margin-top: 32px; /*Spacing between footer and main section */
+}
+aside h3{
+	color: #4A6D7C; /*Text colour of heading*/
+	margin-bottom: 16px; /*Spacing*/
+}
+aside ul{
+	list-style-type: square; /*Changes it to squre instead of disc*/
+}
+aside ul li{
+	margin-bottom: 10px;  /*Add space between each list item*/
+	color: #4A6D7C; /*colour text of list*/
+}
+form{
+	background-color: #ffffff; /*colour of form itself*/
+	padding: 24px; /*spacing*/
+	font-family: inherit; /*gets the font family from parent*/
+	margin-bottom: 32px; /*spacing between form and footer*/
+}
+form label{
+	display: block; /*starts on a new line and taks up full width*/
+	margin-bottom: 6px; /*spacing between form label and form itself*/
+	font-weight: bold; 
+	color: #4A6D7C; /*colour of form text*/
+}
+input[type=text], input[type=email], input[type=password], textarea{
+	width: 100%; /*full width size*/
+	padding: 10px; /*spacing*/
+	margin-bottom: 16px; /*space between each input fields*/
+	border: 2px solid #CCC; /*border size and colout*/
+	font-family: inherit; /*gets the font from parent */
+	font-size: 16px; /*text size*/
+}
+form button{
+	padding: 10px 16px; /*Spacing on top and bottom is 10 and spacing left to right is 16*/
+	background-color: #C6C5B9; /*Colour of form button*/
+	color: white; /*Colour of form button text*/
+}
+form button:hover{
+	background-color: #4A6D7C; /*Colour of button when you hover over it*/
+}
+.tips{
+	display: flex; /*makes all the listing of tips line up in one row*/
+	flex-wrap: nowrap; /*they will not wrap (https://www.w3schools.com/cssref/css3_pr_flex-wrap.php)*/
+	justify-content: space-between; /* there will be spacing
+	                                  (https://www.w3schools.com/cssref/css3_pr_justify-content.php)*/	
+	gap: 16px; /*size of space between the columns of the row(https://www.w3schools.com/cssref/css3_pr_gap.php)*/
+}
+.tips section{
+	flex: 1; /*takes up equal space*/
+	padding: 20px; /*spacing between section content and border*/
+	border: 2px solid #3E505B; /*border size and colour*/
+	background-color: white; /*colour of section container itself*/
+}
+.tips section ul{
+	list-style-type: square; /*Style type is changed to square for the listing of tips*/
+}
+
+.testimonials{
+	display: grid; /*Grid formatting for reviews (https://www.w3schools.com/css/css_grid_container.asp)*/
+    grid-template-columns: auto auto auto auto; /*size of the columns determined by the size of the container and on the size of the contents in the columns*/
+	background-color: white; /*Background colour of reviews*/
+	border: 2px solid #cccccc; /*Border colour and width around reviews*/
+	padding: 16px; /*space between reviews and border*/	
+}
+.testimonials .sentence{
+	grid-column: 1/5; /*spans across all columns(https://www.w3schools.com/cssref/pr_grid-column.php)*/
+	background-color: #C6C5B9; /*colour of text area*/
+	text-align: center; /*centers sentence text*/
+	font-weight: bold;
+	margin-bottom: 24px; /*spacing between the sentence and reviews*/
+	color: #4A6D7C; /*colour of heading text */
+}
+.review{
+	border: 1px solid #cccccc; /*Border colour and width in between reviews*/
+	padding: 16px; /*spacing*/
+}
+.stars-filled{
+	color: yellow; /*Colour of filled stars*/
+}
+.stars{
+	color: #cccccc; /*The colour of the outline of the star*/
+}
+.eventcountdown{
+	width: 100%; /*Takes up full width of row*/
+	background-color: white; /*Background colour of row*/
+	color: #4A6D7C;  /*Colour of text*/
+	border: 3px solid #cccccc; /*border width and colour*/
+	border-radius: 8px; /*rounds the corners*/
+	padding: 16px; /*Spacing inside box*/
+	margin-bottom: 20px; /*Space below this row*/
+	text-align: center; /*centers the text*/
+}
+.event img{
+	width:300px; /*fixed width and height of images*/
+	height: 320px;
+}
+.event{
+	text-align: center; /*centers everything inside event*/
+}
+.placescontainer{
+	display: grid; /*Makes a 3 column layout for places to be set evenly*/
+	grid-template-columns: 450px 450px 450px;
+	gap: 24px; /*spacing between columns*/
+	width: 100%; /*takes up full width*/
+}
+.places{
+	padding: 16px; /*Spacing*/
+	background-color: #C6C5B9; /*colour of background of places section*/
+
+}
+.places h3{
+	text-align: center;
+	margin-bottom: 16px; /*spacing between headings and pictures*/
+}
+.places article{
+	margin-bottom: 16px; /*adds space on bottom of each one*/
+	text-align: center; /*centers text*/
+}
+.places article img{
+	width:100%;
+	height: 250px;
+	object-fit: cover;
+}
+.places figcaption{
+	margin-top: 12px; /*spacing bewteen picture and caption text*/
+}
+iframe{
+	display: block; 
+	margin: 0 auto; /* Center the frame horizontally and sets top and bottom margins to 0
+               	   (https://www.w3schools.com/css/css_margin.asp) */
+	border: 2px solid #4A6D7C; /*colour and size of border around map*/
+}
+.maps{
+	text-align: center;
+	margin-bottom: 16px; /*spacing between headings and pictures*/
+}

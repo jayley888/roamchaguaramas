@@ -1,0 +1,90 @@
+<!DOCTYPE html>  <!--Declares this is a html5 document -->
+<html lang="en-GB">   <!-- Sets the language to general british language -->
+<head>
+     <meta charset="utf-8">   <!-- character set to utf-8 which has almost all the characters and symbols -->
+	 <title> RoamChaguaramas Register/Login </title>  <!-- Sets page title in browser tab -->
+	 <link rel="stylesheet" href="../css/style.css">  <!-- Links my external css sheet to style the page -->
+</head>
+<body>
+    <header>   <!-- Top of the page with main headings and navigation menu -->
+	      <h1>RoamChaguaramas</h1>  <!-- Website name -->
+	      <h2>Register/Login</h2>  <!-- Page title -->
+		  <nav>  <!-- Navigation menu -->
+		    <ul>
+			   <!--Unordered list of links to the various pages -->
+			   <li><a href="../index.html">Home</a></li>
+			   <li><a href="aboutcontact.html">About/Contact Us</a></li>
+			   <li><a href="places.html">Places to Visit</a></li>
+			   <li><a href="events.html">Upcoming Events</a></li>
+			   <li><a href="tips.html">Travel Tips</a></li>
+			   <li><a href="reviews.html">User Reviews</a></li>
+			   <li><a href="registerlogin.html">Register/Login</a></li>
+			</ul>
+		  </nav>
+	</header>
+	
+	<main>   <!-- Main page content -->
+	    <section>  <!-- This section for new user registration -->
+		     <h3>Create an Account</h3>
+			 <form action="thanks.html" method="post"> <!-- Form sends data to thanks.html after submission -->
+			   <fieldset> <!-- Groups related form controls together -->
+			    <legend> Personal Information </legend>
+				
+		        <label for="name"> Full Name: </label> <!-- label connects with input to know the type of data it can contain by its for and id attributes -->
+			    <input type="text" id="name" name="name" required>
+			    <br><br>
+				<label for="dob"> Date of Birth: </label>
+				<input type="date" id="dob" name="dob" max="2006-12-31" required>
+				<br><br>
+				<label for="gender"> Gender: </label>
+				<select id="gender" name="gender" required>  <!--Dropdown for picking gender -->
+				    <option value=""> Select </option>
+					<option value="female"> Female </option>
+					<option value="male"> Male </option>
+					<option value="other"> Other </option>
+				</select>
+				<br><br>
+				</fieldset>
+				
+				<fieldset>
+				   <legend> Login Information </legend>
+				   
+			    <label for="email"> Email Address: </label>
+			    <input type="email" id="email" name="email" required>
+			    <br><br>
+				<label for="username"> Username: </label>
+				<input type="text" id="username" name="username" required>
+				<br><br>
+			    <label for="pswd"> Password: </label>
+			    <input type="password" id="pswd" name="pswd" required>
+			    <br><br>
+				</fieldset>
+				<!-- Submit and reset buttons -->
+			    <button type="submit"> Register </button> &nbsp;&nbsp;
+				<button type="reset"> Clear Form </button>
+		  </form>
+		</section>
+		
+		<section>
+		    <h3>Already a Member?</h3>
+			<form action="thanks.html" method="post">  <!-- This form also submits to thanks.html -->
+			<fieldset>
+				   <legend> Login Here </legend>
+			
+			    <label for="email1"> Email Address: </label>
+			    <input type="email" id="email1" name="email1" required>
+			    <br><br>
+			    <label for="password"> Password: </label>
+			    <input type="password" id="password" name="password" required>
+			 <br><br>
+			 </fieldset>
+			 <button type="submit"> Login </button> &nbsp;&nbsp;
+			</form>	
+		</section>
+	</main>
+	
+	<footer>  <!--Page footer on every page -->
+	   <p> 2025 RoamChaguaramas | All rights reserved </p>
+	</footer>
+</body>
+</html>
