@@ -260,8 +260,13 @@ form button:hover{
 	margin-bottom: 16px; /*spacing between headings and pictures*/
 }
 .places article{
-	margin-bottom: 16px; /*adds space on bottom of each one*/
-	text-align: center; /*centers text*/
+	display: flex; /*makes it a flex container so i can line up the articles better*/
+	flex-direction: column; /*makes the flexible items display vertically, as a column
+	(https://www.w3schools.com/cssref/css3_pr_flex-direction.php)*/
+	align-items: center; /*horizontally centers the items in the articles */
+	justify-content: space-evenly; /*even spacing*/
+	height: 600px; /*height of the articles box*/
+	border: 2px solid #3D5467;
 }
 .places article img{
 	width:100%;
